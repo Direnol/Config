@@ -1,2 +1,2 @@
-# Config
-Debian package. Used apt
+# Debian configure package
+Template for DEB package
