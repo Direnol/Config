@@ -23,4 +23,5 @@ sshfs
 strace
 sublime-text
 tilix
+xserver-xorg-input-synaptics 
 wireshark
