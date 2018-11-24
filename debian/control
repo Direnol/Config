@@ -1,0 +1,13 @@
+Source: conf-sys
+Section: admin
+Priority: optional
+Maintainer: Roman Mingazeev <direnol@unknown>
+Build-Depends: debhelper (>= 10)
+Standards-Version: 4.1.2
+Homepage: https://github.com/Direnol/Deb-config.git
+Vcs-Git: hhttps://github.com/Direnol/Deb-config.git
+
+Package: conf-sys
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Configure my system
