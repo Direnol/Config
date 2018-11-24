@@ -1,0 +1,7 @@
+../bash-completion/elixir
+../bash-completion/npm
+../bash-completion/cargo
+../bash-completion/pip
+../bash-completion/rustup
+../bash-completion/vagrant
+../bash-completion/vbox

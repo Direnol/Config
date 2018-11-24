@@ -1,5 +1,7 @@
-conf-sys (1.0.0-1) unstable; urgency=medium
+conf-sys (%%VSN%%) unstable; urgency=medium
 
-  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+  * %%DESC%%
 
- -- Roman Mingazeev <direnol@unknown>  Sat, 24 Nov 2018 16:30:32 +0700
+  * Configure my system
+
+ -- Roman Mingazeev <direnol@yandex.ru>  %%DATE%%

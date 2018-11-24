@@ -1,0 +1,6 @@
+VBOX_COMPLETION=~/.config/vboxmanage-bash-completion/VBoxManage
+
+if [[ -f ${VBOX_COMPLETION} ]]; then
+    source ${VBOX_COMPLETION}
+fi
+

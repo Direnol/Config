@@ -1,0 +1,7 @@
+if [ "$(dpkg --get-selections vagrant 2> /dev/null)" ]; then
+    COMPL="$(dpkg -L vagrant | grep /bash/completion.sh)"
+    if [ -f "${COMPL}" ]; then
+        source "${COMPL}"
+    fi
+fi
+

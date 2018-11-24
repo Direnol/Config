@@ -1,13 +1,27 @@
 Source: conf-sys
 Section: admin
 Priority: optional
-Maintainer: Roman Mingazeev <direnol@unknown>
-Build-Depends: debhelper (>= 10)
+Maintainer: Roman Mingazeev <direnol@yandex.ru>
+Build-Depends: debhelper (>= 10), bash-completion
 Standards-Version: 4.1.2
 Homepage: https://github.com/Direnol/Deb-config.git
-Vcs-Git: hhttps://github.com/Direnol/Deb-config.git
+Vcs-Git: https://github.com/Direnol/Deb-config.git
 
 Package: conf-sys
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         git (>= 1:2.17.1),
+         openvpn,
+         tilix,
+         wireshark,
+         python3-pip,
+         python-pip,
+         mc,
+         devscripts,
+         docker.io,
+         emacs,
+         neovim,
+         net-tools,
+         clang
 Description: Configure my system
