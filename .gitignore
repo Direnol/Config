@@ -1,0 +1,4 @@
+conf-sys
+*.deb
+*.build*
+*.changes

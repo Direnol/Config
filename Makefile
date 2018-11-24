@@ -4,7 +4,7 @@ NAME=$(shell cat ./package-name)
 VSN=$(shell cat ./package-vsn)
 
 clean:
-	@rm -rf ${NAME}
+	@rm -rf ${NAME} *.deb *.build* *.changes
 
 pre-build: clean
 	@mkdir -p ${NAME}
@@ -12,4 +12,4 @@ pre-build: clean
 
 build: pre-build
 	cd ${NAME} && \
-	debuild -us -uc
+	debuild -i -us -uc -b
