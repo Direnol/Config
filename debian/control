@@ -8,9 +8,13 @@ Homepage: https://github.com/Direnol/Deb-config.git
 Vcs-Git: https://github.com/Direnol/Deb-config.git
 
 Package: conf-sys
-Architecture: any
+Architecture: all
+Replaces: vagrant
 Depends: ${shlibs:Depends},
          ${misc:Depends},
+         bash-completion,
+         build-essential,
+         cmake,
          git (>= 1:2.17.1),
          openvpn,
          tilix,
@@ -18,6 +22,8 @@ Depends: ${shlibs:Depends},
          python3-pip,
          python-pip,
          mc,
+         xserver-xorg-input-synaptics,
+         network-manager-openvpn,
          devscripts,
          docker.io,
          emacs,
@@ -25,3 +31,4 @@ Depends: ${shlibs:Depends},
          net-tools,
          clang
 Description: Configure my system
+ Configure packages

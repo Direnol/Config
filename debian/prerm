@@ -1,8 +1,11 @@
-#!/bin/sh
+#!/bin/bash -e
+
 # prerm script for conf-sys
 #
 # see: dh_installdeb(1)
+. /usr/share/debconf/confmodule
 
+echo "${0} call: ${*}"
 set -e
 
 # summary of how this script can be called:

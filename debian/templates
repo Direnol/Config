@@ -1,0 +1,5 @@
+Template: conf-sys/configure
+Type: boolean
+Default: false
+Description: Do you want configure package?
+Description-ru.UTF-8: Хотите ли настроить пакет?

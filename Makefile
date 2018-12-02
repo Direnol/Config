@@ -1,8 +1,10 @@
-.PHONY: pre-build build clean tc toolchain raw-build cli
+.PHONY: pre-build build clean tc toolchain raw-build cli install \
+		remove purge reconfigure
 
 NAME=$(shell cat ./package-name)
 VSN=$(shell cat ./package-vsn)
 DATE=$(shell date -R)
+DEB=${NAME}_${VSN}_all.deb
 DESC=$(shell git log -1 --pretty=\%B)
 DOCKER=$(shell which docker)
 MAKE=$(shell which make)
@@ -19,6 +21,9 @@ PARAM=--volume "${PWD}":/home/${DUSER}/project \
 		--cap-add=ALL \
 		--rm
 
+all: tc build
+rebuild: clean build
+re-install: rebuild install
 
 tc: toolchain
 toolchain:
@@ -46,6 +51,23 @@ pre-build: clean
 		-e "s/%%VSN%%/${VSN}/g"  \
 		-e "s/%%DESC%%/${DESC}/g" \
 		${NAME}/debian/changelog
+
+%.deb: build
+
+install: ${DEB}
+	@sudo dpkg --install $<
+
+remove: ${DEB}
+	@sudo dpkg --remove $<
+
+purge: ${DEB}
+	@sudo dpkg --purge $<
+
+reconfigure: ${DEB}
+	@sudo dpkg-reconfigure $<
+
+# Raw section
+#######################################
 
 raw-build: pre-build
 	cd ${NAME} && \
