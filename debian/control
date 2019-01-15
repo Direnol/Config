@@ -20,6 +20,7 @@ Depends: ${shlibs:Depends},
          devscripts,
          docker.io,
          emacs,
+         fonts-firacode,
          git (>= 1:2.17.1),
          indent,
          mc,
@@ -33,6 +34,7 @@ Depends: ${shlibs:Depends},
          sshfs,
          tilix,
          wireshark,
+         unrar,
          xserver-xorg-input-synaptics
 Description: Configure my system
  Configure packages
